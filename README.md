@@ -3,6 +3,8 @@ TCO2GO
 
 Hybrid mobile app for TopCoder Open using Ionic.
 
+The app was originally built using the `sidemenu` starter project.
+
 ## iOS Build Errors
 
 I encountered the following error when running `ionic build ios` 
