@@ -1,0 +1,29 @@
+<ion-view title="News">
+    <ion-nav-buttons data-side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+    <ion-content data-scroll="false">
+        <!-- News title bar -->
+        <div class="title-bar title-centered agenda-title-bar">
+            <!-- Date -->
+            <h2>TCO14 News</h2>
+        </div>
+
+        <!-- News List -->
+        <ion-scroll class="has-header-scroll" delegate-handle="news-list-scroll">
+            <ul class="news-list">
+                <li class="item" data-ng-repeat="news in newsList">
+                    <h2 data-ng-click="showNewsDetailsModal(news)">{{ news.title }}</h2>
+                    <p class="digest" data-ng-bind-html="news.digest"></p>
+                    <div class="info">
+                        Posted on {{ news.postDate }} by <a href="javascript:;"><span class="handle">{{ news.postMember }}</span></a>
+                    </div>
+                </li>
+            </ul>
+        </ion-scroll>
+    </ion-content>
+</ion-view>
+
+

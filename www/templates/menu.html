@@ -1,28 +1,50 @@
 <ion-side-menus>
 
-  <ion-pane ion-side-menu-content>
-    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
-      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
-    </ion-nav-bar>
-    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
-  </ion-pane>
+    <ion-pane ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7"></ion-nav-bar>
+        <ion-nav-view name="mainContent" animation="slide-left-right" class="main-content"></ion-nav-view>
+    </ion-pane>
 
-  <ion-side-menu side="left">
-    <header class="bar bar-header bar-stable">
-      <h1 class="title">Left</h1>
-    </header>
-    <ion-content class="has-header">
-      <ion-list>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-side-menu>
+    <ion-side-menu side="left" width="getViewportWidth()" class="main-menu" drag-content="false">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title"><span class="icon icon-menu"></span><span class="text">TCO2GO</span></h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list class="main-menu-list">
+                <ion-item nav-clear menu-close href="#/app/my-profile" ng-class="{ current: $state.current.name.substr(0, 13) == 'app.myprofile' }">
+                    My Profile
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/messages" ng-class="{ current: $state.current.name.substr(0, 12) == 'app.messages' }">
+                    Messages <span class="new-messages">{{ newMessages }}</span>
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/news" ng-class="{ current: $state.current.name.substr(0, 8) == 'app.news' }">
+                    News
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/agenda" ng-class="{ current: $state.current.name.substr(0, 10) == 'app.agenda' }">
+                    Agenda
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/attendees" ng-class="{ current: $state.current.name.substr(0, 13) == 'app.attendees' }">
+                    Attendees
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/favorites" ng-class="{ current: $state.current.name.substr(0, 13) == 'app.favorites' }">
+                    Favorites
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/sponsors" ng-class="{ current: $state.current.name.substr(0, 12) == 'app.sponsors' }">
+                    Sponsors
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/multimedia" ng-class="{ current: $state.current.name.substr(0, 14) == 'app.multimedia' }">
+                    Multimedia
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/settings" ng-class="{ current: $state.current.name.substr(0, 12) == 'app.settings' }">
+                    Settings
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/welcome">
+                    Logout
+                </ion-item>
+            </ion-list>
+
+            <div class="close-menu-area" data-ng-click="toggleMainMenu()">
+            </div>
+        </ion-content>
+    </ion-side-menu>
 </ion-side-menus>

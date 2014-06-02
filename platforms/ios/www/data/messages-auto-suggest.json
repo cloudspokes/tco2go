@@ -1,0 +1,32 @@
+[
+    {
+        "handle": "iamtong",
+        "country": "Thailand",
+        "track": "Studio",
+        "picture": "img/dummy-user-pic-noborder.png"
+    },
+    {
+        "handle": "galeri",
+        "country": "Indonesia",
+        "track": "Studio",
+        "picture": "img/dummy-user-pic-noborder.png"
+    },
+    {
+        "handle": "picachui",
+        "country": "India",
+        "track": "Wireframe",
+        "picture": "img/dummy-user-pic-noborder.png"
+    },
+    {
+        "handle": "ghostar",
+        "country": "United States",
+        "track": "Copilot",
+        "picture": "img/dummy-user-pic-noborder.png"
+    },
+    {
+        "handle": "gfhuertac",
+        "country": "Chile",
+        "track": "First2Finish",
+        "picture": "img/dummy-user-pic-noborder.png"
+    }
+]

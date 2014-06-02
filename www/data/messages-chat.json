@@ -1,0 +1,35 @@
+[
+    {
+        "handle": "Handlename",
+        "message": "Hi there! how are you doing?<br>I am still at the event building now",
+        "time": "21:30",
+        "read": true,
+        "userPicture": "img/dummy-user-pic.png"
+    },
+    {
+        "handle": "me",
+        "message": "Wow!! Really?? I am at home now,<br> could you send the picture?",
+        "time": "21:30",
+        "read": true,
+        "userPicture": "img/dummy-user-pic.png"
+    },
+    {
+        "handle": "Handlename",
+        "message": "Of cource!!, here is the picture",
+        "time": "21:30",
+        "read": true,
+        "userPicture": "img/dummy-user-pic.png",
+        "attachment": {
+            "url": "img/dummy-image.png",
+            "name": "img001.jpg",
+            "size": "212 kb"
+        }
+    },
+    {
+        "handle": "me",
+        "message": "That is sure very crowded...<br>I wish i canjoin you now, Maybe tomorrow...",
+        "time": "21:30",
+        "read": true,
+        "userPicture": "img/dummy-user-pic.png"
+    }
+]

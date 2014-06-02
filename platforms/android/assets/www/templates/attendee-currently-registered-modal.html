@@ -1,0 +1,42 @@
+<!-- Modal: Attendee Currently Registered -->
+<div class="modal similar-to-page-modal">
+    <ion-content data-scroll="false">
+        <div class="title-bar">
+            <h1>Currently Registered</h1>
+            <a href="javascript:;" class="close-modal-button" data-ng-click="attendeeCurrentlyRegisteredModal.hide()">
+                <span class="icon-sprite icon-close-modal"></span>
+            </a>
+        </div>
+        <ion-scroll class="has-header-scroll">
+            <ul class="list currently-registered-list">
+                <li class="item" data-ng-repeat="item in attendeeProfile.currentlyRegistered" >
+                    <section class="registered">
+                        <header>
+                            <h2>{{ item.title }}</h2>
+                        </header>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Start Date:</th>
+                                    <td>{{ item.startDate | date:'MM.dd.yyyy hh:mm' }} EST</td>
+                                </tr>
+                                <tr>
+                                    <th>End Date:</th>
+                                    <td>{{ item.endDate | date:'MM.dd.yyyy hh:mm' }} EST</td>
+                                </tr>
+                                <tr>
+                                    <th>Purse:</th>
+                                    <td>{{ item.purse }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Points:</th>
+                                    <td>{{ item.points }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </li>
+            </ul>
+        </ion-scroll>
+    </ion-content>
+</div>

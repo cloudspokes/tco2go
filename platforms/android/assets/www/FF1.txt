@@ -1,0 +1,38 @@
+1. "all icons should use icnic framework first, check http://ionicons.com/, currently they are static images."
+This is not required confirmed in forum (http://apps.topcoder.com/forums/?module=ThreadList&forumID=580191)
+
+
+2. Main Menu, the menu item width is decreased. To close the main menu, tap on the right empty area.
+
+
+3. "02-A-My-Profile.png:
+ - when open the overlay, like ""Edit Profile"", then click the browser prev/next icon, the overlay will be kept, but the screen behind the overlay will be updated. Please notice such issue in other pages."
+
+In spec it clearly writes 'The goal of this challenge is to build the UI Prototype of the TCO Mobile App based on the HTML5 native app development framework of Ionic.', so the prototype will be integrated in a native app, there won't be browser prev/next buttons
+
+
+4. "06-Favorites.png:
+ - click the star icon on the left of the item should not trigger the Attendee Profile screen"
+
+ In spec it didn't mention anything special about this icon, so I don't think this is an issue.
+
+
+5. "11) News Details
+- see 12-B-News-Details.png
+#1 - this will be another style of overlay screen
+The overlay bg should be transparency not gray"
+
+The overlay can be grey as confirmed here: http://apps.topcoder.com/forums/?module=Thread&threadID=818021&start=0
+
+
+6. "7) Message - Search Attendee
+- see 10-C-Chat-Autosuggest.png
+#1 - once user select an item, it will be highlighted
+It should support deselect item after click/tap the selected item again"
+
+This is not required, see the appeals responses
+
+
+7. "Search Attendee screen, the attendee listed below should be auto-suggest, see page nage ""10-C-Chat-Autosuggest"""
+
+This is not required, see the appeals resopnses

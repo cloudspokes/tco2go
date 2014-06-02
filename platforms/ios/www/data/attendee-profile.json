@@ -1,0 +1,46 @@
+{
+	"handle": "attendeehandle",
+	"role": "Competitor",
+	"imageUrl": "img/dummy-user-pic.png",
+	"quote": "my quote goes here.",
+	"country": "China",
+	"memberSince": "05/01/2014",
+	"email": "sendtome@mail.com",
+	"currentlyRegistered": [
+		{
+			"title": "Financial Loans Applications Responsive Website Design",
+			"startDate": "2014-05-01T08:40:03.385Z",
+			"endDate": "2014-05-01T08:50:03.385Z",
+			"purse": "$2,500.00",
+			"points": "562"
+		},
+		{
+			"title": "EIAD Tablet Design and Branding Integration",
+			"startDate": "2014-04-01T08:40:03.385Z",
+			"endDate": "2014-05-01T08:50:03.385Z",
+			"purse": "$2,750.00",
+			"points": "500"
+		},
+		{
+			"title": "Financial Loans Applications Responsive Website Design",
+			"startDate": "2014-05-01T08:40:03.385Z",
+			"endDate": "2014-05-01T08:50:03.385Z",
+			"purse": "$2,500.00",
+			"points": "562"
+		},
+		{
+			"title": "Financial Loans Applications Responsive Website Design",
+			"startDate": "2014-05-01T08:40:03.385Z",
+			"endDate": "2014-05-01T08:50:03.385Z",
+			"purse": "$2,500.00",
+			"points": "562"
+		},
+		{
+			"title": "Financial Loans Applications Responsive Website Design",
+			"startDate": "2014-05-01T08:40:03.385Z",
+			"endDate": "2014-05-01T08:50:03.385Z",
+			"purse": "$2,500.00",
+			"points": "562"
+		}
+	]
+}

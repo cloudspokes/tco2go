@@ -1,0 +1,45 @@
+<!-- Modal: Sponsor Details -->
+<div class="modal similar-to-page-modal sponsor-details-modal {{ sponsor.type | lowercase }}">
+    <ion-content scroll="false">
+        <!-- do not use ion-header-bar because we don't want the tap-scroll-to-top 
+             side effect (it will scroll main content to top) -->
+        <div class="bar bar-header">
+            <h1>TCO14 {{ sponsor.type }} Sponsor Details</h1>
+            <a href="javascript:;" class="close-modal-button" data-ng-click="hideSponsorDetailsModal()">
+                <span class="icon-sprite icon-close-modal"></span>
+            </a>
+        </div>
+        <ion-scroll class="has-header-scroll has-footer-scroll">
+            <div class="video">
+                <div class="video-wrapper" id="sponsor-video">
+                    <iframe width="560" height="315" src="//www.youtube.com/embed/eZHEnPCEe0o" class="noborder" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="share clear-after">
+                <div class="padded-container">
+                    <div class="float-left">Share</div>
+                    <div class="float-right">
+                        <div class="block-list icon-list">
+                            <a href="javascript:;" class="list-item"><span class="icon-sprite icon-twitter-white"></span></a>
+                            <a href="javascript:;" class="list-item"><span class="icon-sprite icon-google-white"></span></a>
+                            <a href="javascript:;" class="list-item"><span class="icon-sprite icon-facebook-white"></span></a>
+                            <a href="javascript:;" class="list-item"><span class="icon-sprite icon-linkedin-white"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="padded-container">
+                    <h2>{{ sponsor.title }}</h2>
+                    <div data-ng-bind-html="sponsor.details"></div>
+                </div>
+            </div>
+        </ion-scroll>
+        <div class="bar bar-footer button-footer">
+            <div class="buttons-1">
+                <button type="button" class="button blue" data-ng-click="showApplyModal()">Apply Now</button>
+            </div>
+        </div>
+    </ion-content>
+</div> <!-- end modal -->
+

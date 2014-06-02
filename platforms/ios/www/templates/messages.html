@@ -1,0 +1,53 @@
+<ion-view title="Messages">
+    <!-- Main menu button -->
+    <ion-nav-buttons side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+        <div class="title-bar messages-title-bar clear-after">
+            <div class="float-left" data-ng-click="newMessage()">
+                <span class="icon-add icon-sprite"></span>
+                <h2>New Message</h2>
+            </div>
+            <div class="float-right">
+                <a href="javascript:;" class="trash-link" data-ng-click="deleteSelectedUsers()">
+                    <span class="icon-sprite" data-ng-class="{
+                        'icon-trash': userSelectedCount > 0,
+                        'icon-trash-inactive': userSelectedCount === 0
+                    }"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- User list -->
+        <ion-scroll class="has-header-scroll" direction="y">
+            <ul class="list user-list message-check-list">
+                <li class="item" 
+                    data-ng-repeat="user in usersHaveThreads" 
+                    data-ng-click="toggleUserChecked(user)"
+                    data-ng-class="{ checked: user.checked }"
+                >
+                    <div class="checkboxs">
+                        <span class="icon-sprite icon-checked" ng-show="user.checked"></span>
+                        <span class="icon-sprite icon-unchecked" ng-show="!user.checked"></span>
+                    </div>
+                    <div class="user-picture">
+                        <img data-ng-src="{{ user.picture}}" alt="">
+                    </div>
+                    <div class="user-info">
+                        <div class="name">{{ user.handle }}</div>
+                        <div class="country-and-track">{{ user.country }}, {{ user.track }}</div>
+                    </div>
+                    <div class="date">{{ user.date }}</div>
+                    <div class="time">{{ user.time }}</div>
+                </li>
+            </ul>
+        </ion-scroll>
+
+    </ion-content>
+</ion-view>
+
+

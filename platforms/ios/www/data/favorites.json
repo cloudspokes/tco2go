@@ -1,0 +1,137 @@
+{
+	"attendees": [
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 223
+			},
+			{
+				"handle": "galeri",
+				"country": "Indonesia",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 201
+			},
+			{
+				"handle": "picachui",
+				"country": "India",
+				"track": "Wireframe",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 193
+			},
+			{
+				"handle": "ghostar",
+				"country": "United States",
+				"track": "Copilot",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 177
+			},
+			{
+				"handle": "gfhuertac",
+				"country": "Chile",
+				"track": "First2Finish",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 169
+			},
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 223
+			},
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 223
+			},
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 223
+			},
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 223
+			},
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png",
+				"favorites": 223
+			}	
+	],
+	"events": [
+		{ "title": "Event 1", "favorites": 100 },
+		{ "title": "Event 2", "favorites": 100 },
+		{ "title": "Event 3", "favorites": 100 },
+		{ "title": "Event 4", "favorites": 100 },
+		{ "title": "Event 5", "favorites": 100 },
+		{ "title": "Event 6", "favorites": 100 },
+		{ "title": "Event 7", "favorites": 100 },
+		{ "title": "Event 8", "favorites": 100 },
+		{ "title": "Event 9", "favorites": 100 },
+		{ "title": "Event 10", "favorites": 100 }
+	],
+	"multimedias": [
+        {
+            "url": "img/dummy-media.png",
+            "title": "TCO14_Image 001",
+            "thumbnailUrl": "img/dummy-thumbnail.png",
+            "isFavorite": false,
+            "id": 1
+        },{
+            "url": "img/dummy-media.png",
+            "title": "TCO14_Image 001",
+            "thumbnailUrl": "img/dummy-thumbnail.png",
+            "isFavorite": true,
+            "id": 2
+        },{
+            "url": "img/dummy-media.png",
+            "title": "TCO14_Image 001",
+            "thumbnailUrl": "img/dummy-thumbnail.png",
+            "isFavorite": false,
+            "id": 3
+        },{
+            "url": "img/dummy-media.png",
+            "title": "TCO14_Image 001",
+            "thumbnailUrl": "img/dummy-thumbnail.png",
+            "isFavorite": false,
+            "id": 4
+        },{
+            "url": "img/dummy-media.png",
+            "title": "TCO14_Image 001",
+            "thumbnailUrl": "img/dummy-thumbnail.png",
+            "isFavorite": false,
+            "id": 5
+        },{
+            "url": "img/dummy-media.png",
+            "title": "TCO14_Image 001",
+            "thumbnailUrl": "img/dummy-thumbnail.png",
+            "isFavorite": false,
+            "id": 6
+        },{
+            "url": "img/dummy-media.png",
+            "title": "TCO14_Image 001",
+            "thumbnailUrl": "img/dummy-thumbnail.png",
+            "isFavorite": false,
+            "id": 7
+        },{
+            "url": "img/dummy-media.png",
+            "title": "TCO14_Image 001",
+            "thumbnailUrl": "img/dummy-thumbnail.png",
+            "isFavorite": false,
+            "id": 8
+        }
+    ]
+}

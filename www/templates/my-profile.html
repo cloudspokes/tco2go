@@ -1,0 +1,98 @@
+<ion-view title="My Profile">
+    <ion-nav-buttons side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+    <ion-content data-scroll="false">
+        <!-- Profile Details title bar -->
+        <div class="title-bar">
+            <h2>Profile Details</h2>
+            <!-- Edit Profile button -->
+            <div class="right-button">
+                <a href="javascript:;" data-ng-click="showEditProfileModal()" class="edit-profile-link">
+                    <span class="icon-sprite icon-edit-profile"></span>
+                </a>
+            </div>
+        </div>
+        <ion-scroll class="has-header-scroll" delegate-handle="main-scroll">
+            <section class="my-profile">
+                <!-- Area containing user picture -->
+                <header>
+                    <p class="handle">{{ profile.handle }}</p>
+                    <p class="role">{{ profile.role }}</p>
+                    <figure class="picture">
+                        <img data-ng-src="{{ profile.imageUrl }}" width="112" height="112" alt="">
+                    </figure>
+                    <p class="quote">&ldquo;{{ profile.quote }}&rdquo;</p>
+                </header>
+                <div class="colorful-hr">
+                    <span class="part-1"></span>
+                    <span class="part-2"></span>
+                    <span class="part-3"></span>
+                    <span class="part-4"></span>
+                    <span class="part-5"></span>
+                    <span class="part-6"></span>
+                </div>
+                <!-- Profile detail table -->
+                <div class="profile-detail padded-container">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Country</th>
+                                <td>{{ profile.country }}</td>
+                            </tr>
+                            <tr>
+                                <th>Member Since</th>
+                                <td>{{ profile.memberSince }}</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td><a data-ng-href="mailto:{{ profile.email }}">{{ profile.email }}</a></td>
+                            </tr>
+                            <tr>
+                                <th>Currently Registered</th>
+                                <td><a href="javascript:;" data-ng-click="showCurrentlyRegisteredModal()">
+                                        <span data-ng-pluralize count="profile.currentlyRegistered.length" when="
+                                            {'0': '0 Challenge',
+                                             'one': '1 Challenge',
+                                             'other': '{} Challenges'}
+                                        ">
+                                        </span>
+                                </a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Share buttons -->
+                <div class="share-panel padded-container clear-after">
+                    <div class="left">
+                        <a href="javascript:;">
+                            <span class="icon-profile-like"></span>
+                        </a>
+                        <a href="#/app/messages-auto-suggest/{{ profile.handle }}">
+                            <span class="icon-profile-email"></span>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:;">
+                            <span class="icon-profile-twitter"></span>
+                        </a>
+                        <a href="javascript:;">
+                            <span class="icon-profile-googleplus"></span>
+                        </a>
+                        <a href="javascript:;">
+                            <span class="icon-profile-facebook"></span>
+                        </a>
+                        <a href="javascript:;">
+                            <span class="icon-profile-linkedin"></span>
+                        </a>
+                        <a href="javascript:;">
+                            <span class="icon-profile-github"></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </ion-scroll>
+    </ion-content>
+</ion-view>

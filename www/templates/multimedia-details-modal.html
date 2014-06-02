@@ -1,0 +1,33 @@
+<!-- Modal: Multimedia Detail -->
+<div class="modal similar-to-page-modal multimedia-detail-modal">
+    <ion-content scroll="false">
+        <div class="title-bar">
+            <h1>{{ image.title }}</h1>
+            <a href="javascript:;" class="close-modal-button" data-ng-click="multimediaDetailsModal.hide()">
+                <span class="icon-sprite icon-close-modal"></span>
+            </a>
+        </div>
+        <ion-scroll class="has-header-scroll">
+            <img data-ng-src="{{ image.url }}" alt="">
+        </ion-scroll>
+    </ion-content>
+
+    <!-- Footer -->
+    <ion-footer-bar>
+        <!-- Left/Right link -->
+        <a href="javascript:;" class="left-link"><span class="icon-sprite icon-arrow-left"></span></a>
+        <a href="javascript:;" class="right-link"><span class="icon-sprite icon-arrow-right"></span></a>
+
+        <!-- Share/Download link -->
+        <div class="row">
+            <div class="col col-40 col-share">
+                <a href="javascript:;" class="share-link" data-ng-click="shareMedia()">Share</a>
+            </div>
+            <div class="col col-60">
+                <a href="javascript:;" class="download-link">Download</a>
+            </div>
+        </div>
+    </ion-footer-bar>
+</div> <!-- end modal -->
+
+

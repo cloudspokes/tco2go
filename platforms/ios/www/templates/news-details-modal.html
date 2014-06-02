@@ -1,0 +1,41 @@
+<!-- Modal: News Details -->
+<div class="modal similar-to-page-modal news-details-modal">
+    <ion-content data-scroll="false">
+        <!-- do not use ion-header-bar here, because
+            we don't want the ion-scroll to scroll to top
+            when user taps this header bar -->
+        <div class="title-bar">
+            <h1>Details</h1>
+            <a href="javascript:;" class="close-modal-button" data-ng-click="newsDetailsModal.hide();">
+                <span class="icon-sprite icon-close-modal"></span>
+            </a>
+        </div>
+        <ion-scroll class="has-header-scroll">
+            <!-- News Photo -->
+            <div class="photo">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-ng-src="{{ newsDetails.imageUrl }}" alt="">
+            </div>
+            <!-- Share bar -->
+            <div class="share clear-after">
+                <div class="padded-container">
+                    <div class="float-left">Share News</div>
+                    <div class="float-right">
+                        <div class="block-list icon-list">
+                            <a href="javascript:;" class="list-item"><span class="icon-sprite icon-twitter-white"></span></a>
+                            <a href="javascript:;" class="list-item"><span class="icon-sprite icon-google-white"></span></a>
+                            <a href="javascript:;" class="list-item"><span class="icon-sprite icon-facebook-white"></span></a>
+                            <a href="javascript:;" class="list-item"><span class="icon-sprite icon-linkedin-white"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- News Details -->
+            <div class="details padded-container">
+                <h2>{{ newsDetails.title }}</h2>
+                <p class="digest" data-ng-bind-html="newsDetails.digest"></p>
+                <div class="text" data-ng-bind-html="newsDetails.text"></div>
+                <div class="info">Posted on {{ newsDetails.postDate }} by <a href="javascript:;"><span class="handle">{{ newsDetails.postMember }}</span></a></div>
+            </div>
+        </ion-scroll>
+    </ion-content>
+</div> <!-- end modal -->

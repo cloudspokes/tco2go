@@ -1,0 +1,59 @@
+{
+		"beginTime": "2014-05-01T08:30:53.776Z",
+		"endTime": "2014-05-01T21:00:53.776Z",
+		"title": "12 Hour Marathon Championship",
+		"type": "contest",
+		"id": 1,
+		"address": "Ambassador Room, 2nd Floor<br>Lorem Ipsum Hotel, San Francisco",
+		"eventDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+		"theCompetitors": [
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png"
+			},
+			{
+				"handle": "galeri",
+				"country": "Indonesia",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png"
+			},
+			{
+				"handle": "picachui",
+				"country": "India",
+				"track": "Wireframe",
+				"picture": "img/dummy-user-pic.png"
+			},
+			{
+				"handle": "ghostar",
+				"country": "United States",
+				"track": "Copilot",
+				"picture": "img/dummy-user-pic.png"
+			},
+			{
+				"handle": "gfhuertac",
+				"country": "Chile",
+				"track": "First2Finish",
+				"picture": "img/dummy-user-pic.png"
+			},
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png"
+			},
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png"
+			},
+			{
+				"handle": "iamtong",
+				"country": "Thailand",
+				"track": "Studio",
+				"picture": "img/dummy-user-pic.png"
+			}
+		]
+}

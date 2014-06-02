@@ -1,0 +1,35 @@
+2014-04-29 13:34:42.174 HelloCordova[70077:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-29 13:34:42.951 HelloCordova[70077:70b] Unlimited access to network resources
+2014-04-29 13:34:46.563 HelloCordova[70077:70b] [CDVTimer][statusbar] 267.096996ms
+2014-04-29 13:34:46.564 HelloCordova[70077:70b] [CDVTimer][TotalPluginStartup] 267.580032ms
+2014-04-29 13:34:47.493 HelloCordova[70077:70b] Resetting plugins due to page load.
+2014-04-29 13:34:48.895 HelloCordova[70077:70b] Finished load of: file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/24BAA556-9A7C-4DD2-8071-C1A2E8C42AA7/HelloCordova.app/www/index.html#/app/playlists
+2014-04-29 13:34:49.266 HelloCordova[70077:70b] THREAD WARNING: ['Device'] took '27.198975' ms. Plugin should use a background thread.
+2014-04-29 13:34:57.207 HelloCordova[70077:70b] ACTIVATING
+2014-04-29 13:36:17.838 HelloCordova[70249:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-29 13:36:17.913 HelloCordova[70249:70b] Unlimited access to network resources
+2014-04-29 13:36:18.239 HelloCordova[70249:70b] [CDVTimer][statusbar] 293.385983ms
+2014-04-29 13:36:18.240 HelloCordova[70249:70b] [CDVTimer][TotalPluginStartup] 293.904006ms
+2014-04-29 13:36:18.446 HelloCordova[70249:70b] Resetting plugins due to page load.
+2014-04-29 13:36:19.939 HelloCordova[70249:70b] Finished load of: file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/24BAA556-9A7C-4DD2-8071-C1A2E8C42AA7/HelloCordova.app/www/index.html#/app/playlists
+2014-04-29 13:36:22.839 HelloCordova[70249:70b] ACTIVATING
+2014-06-02 15:11:30.651 HelloCordova[37012:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-02 15:11:30.716 HelloCordova[37012:70b] Unlimited access to network resources
+2014-06-02 15:11:33.083 HelloCordova[37012:70b] [CDVTimer][statusbar] 212.835014ms
+2014-06-02 15:11:33.084 HelloCordova[37012:70b] [CDVTimer][TotalPluginStartup] 213.556051ms
+2014-06-02 15:11:33.206 HelloCordova[37012:70b] Resetting plugins due to page load.
+2014-06-02 15:11:34.553 HelloCordova[37015:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-02 15:11:34.560 HelloCordova[37015:70b] Unlimited access to network resources
+2014-06-02 15:11:34.591 HelloCordova[37015:70b] [CDVTimer][statusbar] 8.512020ms
+2014-06-02 15:11:34.591 HelloCordova[37015:70b] [CDVTimer][TotalPluginStartup] 9.012997ms
+2014-06-02 15:11:34.624 HelloCordova[37015:70b] Resetting plugins due to page load.
+2014-06-02 15:11:42.487 HelloCordova[37015:70b] Finished load of: file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/24BAA556-9A7C-4DD2-8071-C1A2E8C42AA7/HelloCordova.app/www/index.html#/app/welcome
+2014-06-02 15:12:33.743 HelloCordova[37015:260b] -[UIKeyboardInputManagerClient handleError:forRequest:] will retry sending generateCandidatesWithKeyboardState:candidateRange:continuation: to keyboard daemon after receiving Error Domain=NSCocoaErrorDomain Code=4097 "The operation couldn’t be completed. (Cocoa error 4097.)"
+2014-06-02 15:13:56.034 HelloCordova[37015:70b] Received memory warning.
+2014-06-02 15:54:59.919 HelloCordova[1872:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-02 15:54:59.970 HelloCordova[1872:70b] Unlimited access to network resources
+2014-06-02 15:55:01.572 HelloCordova[1872:70b] [CDVTimer][statusbar] 163.323998ms
+2014-06-02 15:55:01.572 HelloCordova[1872:70b] [CDVTimer][TotalPluginStartup] 163.825989ms
+2014-06-02 15:55:01.694 HelloCordova[1872:70b] Resetting plugins due to page load.
+2014-06-02 15:55:02.740 HelloCordova[1872:70b] Finished load of: file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/24BAA556-9A7C-4DD2-8071-C1A2E8C42AA7/HelloCordova.app/www/index.html#/app/welcome
+2014-06-02 15:55:14.161 HelloCordova[1872:70b] Failed to load webpage with error: The URL can’t be shown

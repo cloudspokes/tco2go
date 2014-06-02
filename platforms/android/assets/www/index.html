@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <title>TCO14 App</title>
 
+    <!-- Include Source Sans Pro from Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+    <!-- ionic CSS Style -->
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
+    <!-- App CSS Style -->
+    <link href="css/screen.css" rel="stylesheet">
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -18,12 +18,15 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <!-- your app's js -->
+    <!-- App's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
-  </head>
+</head>
 
-  <body ng-app="starter">
-    <ion-nav-view></ion-nav-view>
-  </body>
+<body data-ng-app="tco14app" data-ng-controller="AppCtrl">
+    <div id="main-content-wrapper">
+        <ion-nav-view></ion-nav-view>
+    </div>
+</body>
+
 </html>

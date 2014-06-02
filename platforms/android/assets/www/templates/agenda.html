@@ -1,0 +1,73 @@
+<ion-view title="Agenda">
+    <ion-nav-buttons side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+    <ion-content data-scroll="false">
+        <!-- Profile Details title bar -->
+        <div class="title-bar title-centered agenda-title-bar">
+            <!-- Prev Button -->
+            <div class="left-button">
+                <a href="javascript:;" data-ng-click="goPrevDay()" class="prev-day-link">
+                    <span class="icon-sprite icon-prev"></span>
+                </a>
+            </div>
+            <!-- Date -->
+            <h2><span data-ng-show="isToday">Today, </span>{{ day|date:'dd/MM/yyyy' }}</h2>
+            <!-- Next button -->
+            <div class="right-button">
+                <a href="javascript:;" data-ng-click="goNextDay()" class="next-day-link">
+                    <span class="icon-sprite icon-next"></span>
+                </a>
+            </div>
+        </div>
+        <!-- Agenda Filter Bar -->
+        <div class="agenda-filter-bar">
+            <div class="padded-container">
+                <!-- Filter buttons -->
+                <div class="left">
+                    <div class="block-list icon-list">
+                        <a href="javascript:;" class="list-item" data-ng-click="toggleFilterFood()">
+                            <span class="icon-sprite icon-spoon-active" data-ng-class="{'icon-spoon-inactive': !showFood}"></span>
+                        </a>
+                        <a href="javascript:;" class="list-item" data-ng-click="toggleFilterContest()">
+                            <span class="icon-sprite icon-contest-active"  data-ng-class="{'icon-contest-inactive': !showContest}"></span>
+                        </a>
+                        <a href="javascript:;" class="list-item" data-ng-click="toggleFilterPresentation()">
+                            <span class="icon-sprite icon-presentation-active"  data-ng-class="{'icon-presentation-inactive': !showPresentation}"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Alert button -->
+                <div class="right">
+                    <a href="javascript:;" data-ng-click="showAlert()">
+                        <span class="alerts-with-count">
+                            <span class="icon-sprite icon-alerts"></span>
+                            <span class="alert-count" data-ng-show="alerts.length > 0">
+                                <span>{{ alerts.length }}</span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Agenda list -->
+        <ion-scroll class="has-2-headers-scroll" data-delegate-handle='agenda-list'>
+            <ul class="list agenda-list">
+                <!-- Event item -->
+                <li class="item {{ item.type }}" data-ng-repeat="item in filteredEvents = (agenda | filter:filterByType)" data-ng-click="showEventDetails(item)">
+                    <div class="time">
+                        <span>{{ item.beginTime|date:'h:mm a' }}</span>
+                        <span>-</span>
+                        <span>{{ item.endTime|date:'h:mm a' }}</span>
+                    </div>
+                    <div class="title">{{ item.title }}</div>
+                </li>
+            </ul>
+            <!-- No event message -->
+            <p class="padded-container" data-ng-if="!filteredEvents.length">No Events</p>
+        </ion-scroll">
+    </ion-content>
+</ion-view>
+

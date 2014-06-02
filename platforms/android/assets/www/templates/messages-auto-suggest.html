@@ -1,0 +1,79 @@
+<ion-view title="Messages">
+    <!-- Main menu button -->
+    <ion-nav-buttons side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+        <div class="title-bar messages-title-bar clear-after">
+            <div class="float-left" data-ng-click="goToAllMessages()">
+                <span class="icon-arrow-left icon-sprite"></span>
+                <h2>All Messages</h2>
+            </div>
+            <div class="float-right">
+                <span class="icon-sprite" data-ng-click="deleteSelectedUsers()" data-ng-class="{
+                    'icon-trash': userSelectedCount > 0,
+                    'icon-trash-inactive': userSelectedCount === 0
+                }"></span>
+            </div>
+        </div>
+
+        <div class="message-to-field">
+            <div class="padded-container">
+                <label>To:</label>
+                <input type="text" data-ng-model="selectedUserHandle">
+            </div>
+        </div>
+
+        <!-- User list -->
+        <ion-scroll class="has-2-headers-scroll" direction="y">
+            <ul class="list user-list message-auto-suggest-list" data-ng-if="users.length">
+                <li class="item" 
+                    data-ng-repeat="user in users" 
+                    data-ng-click="selectUser(user)"
+                    data-ng-class="{ selected: selectedUser.handle === user.handle }"
+                >
+                    <div class="user-picture">
+                        <img data-ng-src="{{ user.picture}}" alt="">
+                    </div>
+                    <div class="user-info">
+                        <div class="name">{{ user.handle }}</div>
+                        <div class="country-and-track">{{ user.country }}, {{ user.track }}</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="chat-message-list" data-ng-if="messages.length">
+                <div class="message clear-after" data-ng-repeat="message in messages">
+                    <div class="user-picture">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" ng-src="{{ message.userPicture }}" alt="">
+                    </div>
+                    <div class="message-detail">
+                        <div class="handle">{{ message.handle }}</div>
+                        <div class="message" data-ng-bind-html="message.message"></div>
+                        <div class="attachment" data-ng-if="message.attachment">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" ng-src="{{ message.attachment.url }}" alt="">
+                            <div class="attachment-name">{{ message.attachment.name }}</div>
+                            <div class="attachment-size">{{ message.attachment.size }}</div>
+                        </div>
+                        <div class="time">{{ message.time }}</div>
+                        <div class="read" ng-show="{{ message.read }}">read</div>
+                    </div>
+                </div>
+            </div>
+        </ion-scroll>
+
+    </ion-content>
+    <ion-footer-bar>
+        <div class="messages-footer button-footer">
+            <div class="input-wrapper">
+                <input type="text" placeholder="write a message..." data-ng-model="messageTyped" data-ng-disabled="!selectedUser.handle">
+            </div>
+            <button class="button blue" type="button" data-ng-click="sendMessage()" data-ng-class="{ inactive: !selectedUser.handle || !messageTyped.length }" data-animation="no-animation">Send</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>
+
+
+

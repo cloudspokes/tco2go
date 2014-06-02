@@ -1,0 +1,48 @@
+<!-- Modal: Search Attendees -->
+<div class="modal black-overlay-modal search-attendees-modal">
+    <ion-header-bar>
+        <h1>Search</h1>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        <!-- Input box -->
+        <div class="search-input padded-container">
+            <div class="label-wrapper with-search-icon">
+                <input type="text" data-ng-model="searchOptions.keyword" placeholder="type keyword here" data-ng-change="resetModalScroll()">
+                <a href="javascript:;" class="input-delete" data-ng-click="clearSearch()" data-ng-show="searchOptions.keyword.length">
+                    <span class="icon-sprite icon-input-delete"></span>
+                </a>
+                <span class="icon-sprite icon-search-in-input"></span>
+            </div>
+        </div>
+
+        <!-- Search result count -->
+        <div class="padded-container search-result-info">
+            <span class="search-result-count">{{ (filteredAttendees = (attendees | filter:filterByKeyword)).length }}</span> search
+            <span data-ng-show="filteredAttendees.length > 1">results</span>
+            <span data-ng-show="filteredAttendees.length <= 1">result</span>
+        </div>
+
+        <!-- Search result list -->
+        <ion-scroll direction="y" class="search-result-scroll">
+            <ul class="list user-list">
+                <li data-ng-repeat="user in filteredAttendees" data-ng-click="showAttendeeProfileModal()" class="item">
+                    <div class="user-picture">
+                        <img data-ng-src="{{ user.picture}}" alt="">
+                    </div>
+                    <div class="user-info">
+                        <div class="name">{{ user.handle }}</div>
+                        <div class="country-and-track">{{ user.country }}, {{ user.track }}</div>
+                    </div>
+                    <span class="icon-sprite icon-arrow-right"></span>
+                </li>
+            </ul>
+        </ion-scroll>
+    </ion-content>
+    <!-- Footer -->
+    <ion-footer-bar class="button-footer bar bar-footer">
+        <div class="buttons-1">
+            <button type="button" class="button blue" data-ng-click="hideSearchModal()">Dismiss</button>
+        </div>
+    </ion-footer-bar>
+</div> <!-- end modal -->
+

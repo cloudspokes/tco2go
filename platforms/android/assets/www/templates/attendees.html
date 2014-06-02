@@ -1,0 +1,56 @@
+<ion-view title="Attendees">
+    <!-- Main menu button -->
+    <ion-nav-buttons side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+        <div class="attendee-info-bar clear-after">
+            <!-- Total xx Attendees message -->
+            <div class="float-left">
+                Total <span class="attendee-count">{{ attendees.length }}</span> attendees
+            </div>
+            <!-- Search button -->
+            <div class="float-right">
+                <a href="javascript:;" class="attendee-search-link" data-ng-click="openSearchModal()">
+                    <span class="icon-sprite icon-search"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Group tabs -->
+        <!-- don't use ion-scroll here because it has some display gliches on the iPhone -->
+        <div class="tabs-scroll">
+            <ul class="group-tabs">
+                <li data-ng-repeat="group in ['Competitors', 'Speakers', 'Sponsors', 'Others']" data-ng-class="{ active: group === currentGroup }"
+                    data-ng-click='setCurrentGroup(group)'
+                >
+                    <span class="text">
+                        {{ group }}
+                        <span class="icon-sprite icon-arrow-down"></span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- User list -->
+        <ion-scroll class="attendee-scroll-container" direction="y" delegate-handle="attendee-list-scroll">
+            <ul class="list user-list">
+                <li class="item" data-ng-repeat="user in filteredAttendees = (attendees | filter:filterByGroup)" data-ng-click="showAttendeeProfileModal()">
+                    <div class="user-picture">
+                        <img data-ng-src="{{ user.picture}}" alt="">
+                    </div>
+                    <div class="user-info">
+                        <div class="name">{{ user.handle }}</div>
+                        <div class="country-and-track">{{ user.country }}, {{ user.track }}</div>
+                    </div>
+                </li>
+            </ul>
+        </ion-scroll>
+
+    </ion-content>
+</ion-view>
+
+

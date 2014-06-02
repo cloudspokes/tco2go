@@ -1,0 +1,67 @@
+<ion-view title="Favorites">
+    <!-- Main menu button -->
+    <ion-nav-buttons data-side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content data-scroll="false">
+        <!-- Group tabs -->
+        <ul class="group-tabs favorites-tabs">
+            <li data-ng-repeat="group in ['Attendee', 'Event', 'Multimedia']" data-ng-class="{ active: group === currentGroup }"
+                data-ng-click='setCurrentGroup(group)'
+            >
+                <span class="text">
+                    {{ group }}
+                    <span class="icon-sprite icon-arrow-down"></span>
+                </span>
+            </li>
+        </ul>
+
+        <!-- Favorites list -->
+        <ion-scroll class="has-header-scroll" direction="y" delegate-handle="favorites-list-scroll">
+            <!-- Attendee list -->
+            <ul class="list user-list favorite-list" data-ng-if="currentGroup === 'Attendee'">
+                <li class="item" data-ng-repeat="user in attendees" data-ng-click="showAttendeeProfileModal()">
+                    <div class="favorite-info">
+                        <span class="icon-sprite icon-favorite"></span>
+                        <span class="favorite-count">{{ user.favorites }}</span>
+                    </div>
+                    <div class="user-picture">
+                        <img src="img/dummy-user-pic.png" data-ng-src="{{ user.picture}}" alt="">
+                    </div>
+                    <div class="user-info">
+                        <div class="name">{{ user.handle }}</div>
+                        <div class="country-and-track">{{ user.country }}, {{ user.track }}</div>
+                    </div>
+                </li>
+            </ul>
+            <!-- Event list -->
+            <ul class="list user-list favorite-list" data-ng-if="currentGroup === 'Event'">
+                <li class="item" data-ng-repeat="event in events">
+                    <div class="favorite-info">
+                        <span class="icon-sprite icon-favorite"></span>
+                        <span class="favorite-count">{{ event.favorites }}</span>
+                    </div>
+                    <div>
+                        {{ event.title }}
+                    </div>
+                </li>
+            </ul>
+            <!-- Multimedia list -->
+            <ul class="list user-list favorite-list" data-ng-if="currentGroup === 'Multimedia'">
+                <li class="item" data-ng-repeat="media in multimedias" data-ng-click="showMultimediaDetailsModal(media)">
+                    <div class="favorite-info">
+                        <span class="icon-sprite icon-favorite"></span>
+                        <span class="favorite-count">{{ media.favorites }}</span>
+                    </div>
+                    <div>
+                        {{ media.title }}
+                    </div>
+                </li>
+            </ul>
+        </ion-scroll>
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,56 @@
+<ion-view title="Settings">
+    <!-- Main menu button -->
+    <ion-nav-buttons side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list settings-list ionic">
+            <!-- Evvent Push Notifications -->
+            <div class="item item-toggle">
+                 Event Push Notifications
+                 <label class="toggle toggle-assertive">
+                     <input type="checkbox" checked>
+                     <div class="track">
+                         <div class="handle"></div>
+                     </div>
+                 </label>
+            </div>
+
+            <!-- Allow Private Messages -->
+            <div class="item item-toggle">
+                Allow Private Messages
+                <label class="toggle toggle-assertive">
+                     <input type="checkbox" checked>
+                     <div class="track">
+                         <div class="handle"></div>
+                     </div>
+                 </label>
+            </div>
+
+            <!-- Privacy Policy -->
+            <a href="javascript:;" class="item" data-ng-click="privacyPolicyModal.show()">
+                Privacy Policy
+                <span class="icon-sprite icon-list-arrow-right"></span>
+            </a>
+
+            <!-- Terms & Services -->
+            <a href="javascript:;" class="item" data-ng-click="termsAndServicesModal.show()">
+                Terms & Services
+                <span class="icon-sprite icon-list-arrow-right"></span>
+            </a>
+
+            <!-- Rate This App -->
+            <a href="javascript:;" class="item" data-ng-click="rateThisAppModal.show()">
+                Rate This App
+                <span class="icon-sprite icon-list-arrow-right"></span>
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>
+
+
+

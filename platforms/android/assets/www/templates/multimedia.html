@@ -1,0 +1,42 @@
+<ion-view title="Multimedia">
+    <!-- Main menu button -->
+    <ion-nav-buttons side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+        <div class="title-bar multimedia-title-bar">
+            <h2>
+                TCO14
+                <span data-ng-show="currentTab == 'photo'">Photos</span>
+                <span data-ng-show="currentTab == 'video'">Videos</span>
+            </h2>
+            <span class="icon-add-bg" data-ng-show="addMediaMenuShown"></span>
+            <a href="javascript:;" data-ng-click="addMedia()" class="right-icon">
+                <span class="icon-sprite icon-add"></span>
+            </a>
+        </div>
+        
+        <!-- Album list -->
+        <ion-scroll direction="y" class="media-list-scroll" delegate-handle="main-scroll">
+            <div class="media-list">
+                <div class="media-item" data-ng-repeat="media in medias" data-ng-click="showDetailsModal(media)">
+                    <img data-ng-src="{{ media.thumbnailUrl }}" alt="">
+                    <span class="icon-sprite icon-favorite-on" data-ng-hide="!media.isFavorite" data-ng-click="toggleIsFavorite(media); $event.stopPropagation();"></span>
+                    <span class="icon-sprite icon-favorite-off" data-ng-hide="media.isFavorite" data-ng-click="toggleIsFavorite(media); $event.stopPropagation();"></span>
+                </div>
+            </div>
+        </ion-scroll>
+    </ion-content>
+    <ion-footer-bar class="button-footer">
+        <div class="buttons-2">
+            <button type="button" class="button blue" data-ng-click="changeTab('photo')" data-ng-class="{ darkblue: currentTab === 'photo' }">Photos</button>
+            <button type="button" class="button blue" data-ng-click="changeTab('video')" data-ng-class="{ darkblue: currentTab === 'video' }">Video</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>
+
+
+

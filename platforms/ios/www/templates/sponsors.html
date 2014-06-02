@@ -1,0 +1,46 @@
+<ion-view title="Sponsors">
+    <ion-nav-buttons side="right">
+        <button class="button" data-ng-click="toggleMainMenu()">
+            <span class="icon-sprite icon-menu"></span>
+        </button>
+    </ion-nav-buttons>
+    <ion-content delegate-handle="main-scroll">
+        <!-- Gold -->
+        <div class="title-bar gold">
+            <h2>TCO14 Gold Sponsor</h2>
+        </div>
+        <ul class="list sponsor-list">
+            <li class="item" data-ng-repeat="sponsor in goldSponsors" data-ng-click="showSponsorDetailModal(sponsor)">
+                <!-- src is an empty image data -->
+                <img class="sponsor-logo"  data-ng-src="{{ sponsor.logoUrl}}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="">
+                <span class="sponsor-text">{{ sponsor.text }}</span>
+                <span class="icon-sprite icon-blue-arrow-right"></span>
+            </li>
+        </ul>
+        <!-- Silver -->
+        <div class="title-bar silver">
+            <h2>TCO14 Silver Sponsor</h2>
+        </div>
+        <ul class="list sponsor-list">
+            <li class="item" data-ng-repeat="sponsor in silverSponsors" data-ng-click="showSponsorDetailModal(sponsor)">
+                <!-- src is an empty image data -->
+                <img class="sponsor-logo" data-ng-src="{{ sponsor.logoUrl}}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="">
+                <span class="sponsor-text">{{ sponsor.text }}</span>
+                <span class="icon-sprite icon-blue-arrow-right"></span>
+            </li>
+        </ul>
+        <!-- Bronze -->
+        <div class="title-bar bronze">
+            <h2>TCO14 Bronze Sponsor</h2>
+        </div>
+        <ul class="list sponsor-list">
+            <li class="item" data-ng-repeat="sponsor in bronzeSponsors" data-ng-click="showSponsorDetailModal(sponsor)">
+                <!-- src is an empty image data -->
+                <img class="sponsor-logo"  data-ng-src="{{ sponsor.logoUrl}}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="">
+                <span class="sponsor-text">{{ sponsor.text }}</span>
+                <span class="icon-sprite icon-blue-arrow-right"></span>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
+

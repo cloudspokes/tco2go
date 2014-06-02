@@ -1,0 +1,50 @@
+{
+    "goldSponsors": [
+        {
+            "logoUrl": "img/google-logo.png",
+            "text": "www.google.com",
+            "type": "Gold",
+            "title": "Google",
+            "details": "<p>Googlers solve complex problems everyday in the name of our mission to organize the world’s information and make it universally accessible to our users. The truly Google unique is our culture that encourages a healthy disregard for the impossible. </p><p>If you want to come do cool, and crazy, things that matter, check out our career opportunities <a href='javascript:;'>here</a>.</p>"
+        },
+        {
+            "logoUrl": "img/google-logo.png",
+            "text": "www.google.com",
+            "type": "Gold",
+            "title": "Google",
+            "details": "<p>Googlers solve complex problems everyday in the name of our mission to organize the world’s information and make it universally accessible to our users. The truly Google unique is our culture that encourages a healthy disregard for the impossible. </p><p>If you want to come do cool, and crazy, things that matter, check out our career opportunities <a href='javascript:;'>here</a>.</p>"
+        }
+    ],
+    "silverSponsors": [
+        {
+            "logoUrl": "img/google-logo.png",
+            "text": "www.google.com",
+            "type": "Silver",
+            "title": "Google",
+            "details": "<p>Googlers solve complex problems everyday in the name of our mission to organize the world’s information and make it universally accessible to our users. The truly Google unique is our culture that encourages a healthy disregard for the impossible. </p><p>If you want to come do cool, and crazy, things that matter, check out our career opportunities <a href='javascript:;'>here</a>.</p>"
+        },
+        {
+            "logoUrl": "img/google-logo.png",
+            "text": "www.google.com",
+            "type": "Silver",
+            "title": "Google",
+            "details": "<p>Googlers solve complex problems everyday in the name of our mission to organize the world’s information and make it universally accessible to our users. The truly Google unique is our culture that encourages a healthy disregard for the impossible. </p><p>If you want to come do cool, and crazy, things that matter, check out our career opportunities <a href='javascript:;'>here</a>.</p>"
+        }
+    ],
+    "bronzeSponsors": [
+        {
+            "logoUrl": "img/google-logo.png",
+            "text": "www.google.com",
+            "type": "Bronze",
+            "title": "Google",
+            "details": "<p>Googlers solve complex problems everyday in the name of our mission to organize the world’s information and make it universally accessible to our users. The truly Google unique is our culture that encourages a healthy disregard for the impossible. </p><p>If you want to come do cool, and crazy, things that matter, check out our career opportunities <a href='javascript:;'>here</a>.</p>"
+        },
+        {
+            "logoUrl": "img/google-logo.png",
+            "text": "www.google.com",
+            "type": "Bronze",
+            "title": "Google",
+            "details": "<p>Googlers solve complex problems everyday in the name of our mission to organize the world’s information and make it universally accessible to our users. The truly Google unique is our culture that encourages a healthy disregard for the impossible. </p><p>If you want to come do cool, and crazy, things that matter, check out our career opportunities <a href='javascript:;'>here</a>.</p>"
+        }
+    ]
+}

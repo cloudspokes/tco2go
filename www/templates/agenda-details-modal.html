@@ -1,0 +1,83 @@
+<!-- Modal: Agenda Detail -->
+<div class="modal similar-to-page-modal event-detail-modal">
+    <ion-content data-scroll="false">
+        <!-- do not use ion-header-bar here, because
+            we don't want the ion-scroll to scroll to top
+            when user taps this header bar -->
+        <div class="title-bar">
+            <h1>Details</h1>
+            <a href="javascript:;" class="close-modal-button" data-ng-click="eventDetailsModal.hide()">
+                <span class="icon-sprite icon-close-modal"></span>
+            </a>
+        </div>
+        <ion-scroll class="has-header-scroll" delegate-handle="event-detail">
+            <section class="agenda-detail">
+                <header class="padded-container">
+                    <!-- Time & Date -->
+                    <div class="time float-left">
+                        <span>{{ event.beginTime|date:'h:mm a' }}</span> <span>-</span> <span>{{ event.endTime|date:'h:mm a' }}</span>
+                    </div>
+                    <div class="date float-right">{{ event.beginTime | date:'d/M/yyyy' }}</div>
+                    <!-- Title -->
+                    <h2>{{ event.title }}</h2>
+                </header>
+
+                <!-- Address Line -->
+                <p class="address padded-container" data-ng-bind-html="event.address">
+                </p>
+
+                <!-- Countdown & Alert toggle-->
+                <div class="countdown padded-container clear-after">
+                    <p class="float-left">Event starts in <span class="countdown-time">{{ countdown }}</span></p>
+                    <label class="toggle float-right alert-toggle">
+                        <input type="checkbox">
+                        <span class="track">
+                            <span class="handle"><span class="icon-sprite icon-bell"></span></span>
+                            <span class="off">OFF</span>
+                            <span class="on">ON</span>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Share buttons -->
+                <div class="share padded-container">
+                    <div class="block-list icon-list">
+                        <a href="javascript:;" class="list-item"><span class="icon-sprite icon-twitter"></span></a>
+                        <a href="javascript:;" class="list-item"><span class="icon-sprite icon-googleplus"></span></a>
+                        <a href="javascript:;" class="list-item"><span class="icon-sprite icon-facebook"></span></a>
+                        <a href="javascript:;" class="list-item"><span class="icon-sprite icon-linkedin"></span></a>
+                    </div>
+                </div>
+                
+                <!-- Event Description -->
+                <section class="expandable">
+                    <span class="icon-sprite" data-ng-class="{'icon-plus': !eventExpanded, 'icon-minus': eventExpanded}" data-ng-click="toggleEventExpanded()"></span>
+                    <h3 data-ng-click="toggleEventExpanded()">Event Description</h3>
+                    <div class="content padded-container" data-ng-show="eventExpanded">
+                        <p>{{ event.eventDescription }}</p>
+                    </div>
+                </section>
+
+                <!-- The Competitors -->
+                <section class="expandable last-expandable">
+                    <span class="icon-sprite" data-ng-class="{'icon-plus': !competitorsExpanded, 'icon-minus': competitorsExpanded}" data-ng-click="toggleCompetitorsExpanded()"></span>
+                    <h3 data-ng-click="toggleCompetitorsExpanded()">The Competitors</h3>
+                    <div class="content" data-ng-show="competitorsExpanded">
+                        <ul class="list user-list">
+                            <li class="item" data-ng-repeat="user in event.theCompetitors" data-ng-click="showAttendeeProfileModal()">
+                                <div class="user-picture">
+                                    <img src="img/dummy-user-pic.png" data-ng-src="{{ user.picture}}" alt="">
+                                </div>
+                                <div class="user-info">
+                                    <div class="name">{{ user.handle }}</div>
+                                    <div class="country-and-track">{{ user.country }}, {{ user.track }}</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </section>
+        </ion-scroll>
+    </ion-content>
+</div> <!-- end modal -->

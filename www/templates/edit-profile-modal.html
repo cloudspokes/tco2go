@@ -1,0 +1,107 @@
+<!-- Modal: Edit Profile -->
+<div class="modal black-overlay-modal edit-profile-modal">
+    <ion-content>
+        <div class="padded-container">
+            <h1>Edit Profile</h1>
+            <div class="list">
+                <!-- Name field -->
+                <div class="label-wrapper">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Name</span>
+                        <input type="text" placeholder="" data-ng-model="editedProfile.name">
+                    </label>
+                    <a href="javascript:;" class="input-delete" data-ng-click="clearName()" data-ng-show="editedProfile.name.length">
+                        <span class="icon-sprite icon-input-delete"></span>
+                    </a>
+                </div>
+                <!-- Country field -->
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Country</span>
+                    <select data-ng-model="editedProfile.country">
+                        <option value="China">China</option>
+                        <option value="Country 1">Country 1</option>
+                        <option value="Country 2">Country 2</option>
+                        <option value="Country 3">Country 3</option>
+                        <option value="Country 4">Country 4</option>
+                    </select>
+                    <span class="current-selected-item">{{ editedProfile.country }}</span>
+                    <span class="icon-sprite icon-input-dropdown"></span>
+                </label>
+                <!-- Email field -->
+                <div class="label-wrapper">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <!-- AngularJS has some bugs supporting type="email" (ng-model not updating), use text instead -->
+                        <input type="text" placeholder="" data-ng-model="editedProfile.email">
+                    </label>
+                    <a href="javascript:;" class="input-delete" data-ng-click="clearEmail()"  data-ng-show="editedProfile.email.length">
+                        <span class="icon-sprite icon-input-delete"></span>
+                    </a>
+                </div>
+                <!-- Attendee field -->
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Attendee</span>
+                    <select data-ng-model="editedProfile.role">
+                        <option value="Competitor">Competitor</option>
+                        <option value="Attendee 1">Attendee 1</option>
+                        <option value="Attendee 2">Attendee 2</option>
+                    </select>
+                    <span class="current-selected-item">{{ editedProfile.role }}</span>
+                    <span class="icon-sprite icon-input-dropdown"></span>
+                </label>
+                <!-- Quote field -->
+                <div class="label-wrapper">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Quote</span>
+                        <input type="text" placeholder="" data-ng-model="editedProfile.quote">
+                    </label>
+                    <a href="javascript:;" class="input-delete" data-ng-click="clearQuote()" data-ng-show="editedProfile.quote.length">
+                        <span class="icon-sprite icon-input-delete"></span>
+                    </a>
+                </div>
+            </div> <!-- end .list -->
+            <!-- Share Buttons -->
+            <div class="share centered-container">
+                <div class="buttons block-list icon-list">
+                    <a href="javascript:;" class="list-item">
+                        <span class="icon-sprite" data-ng-class="{
+                            'icon-twitter': !editedProfile.twitterInactive,
+                            'icon-twitter-inactive': editedProfile.twitterInactive
+                        }"></span>
+                    </a>
+                    <a href="javascript:;" class="list-item">
+                        <span class="icon-sprite" data-ng-class="{
+                            'icon-googleplus': !editedProfile.googleplusInactive,
+                            'icon-googleplus-inactive': editedProfile.googleplusInactive
+                        }"></span>
+                    </a>
+                    <a href="javascript:;" class="list-item">
+                        <span class="icon-sprite" data-ng-class="{
+                            'icon-facebook': !editedProfile.facebookInactive,
+                            'icon-facebook-inactive': editedProfile.facebookInactive
+                        }"></span>
+                    </a>
+                    <a href="javascript:;" class="list-item">
+                        <span class="icon-sprite" data-ng-class="{
+                            'icon-linkedin': !editedProfile.linkedinInactive,
+                            'icon-linkedin-inactive': editedProfile.linkedinInactive
+                        }"></span>
+                    </a>
+                    <a href="javascript:;" class="list-item">
+                        <span class="icon-sprite" data-ng-class="{
+                            'icon-github': !editedProfile.githubInactive,
+                            'icon-github-inactive': editedProfile.githubInactive
+                        }"></span>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- end div.padded-container -->
+    </ion-content>
+    <!-- Footer -->
+    <ion-footer-bar class="button-footer bar bar-footer">
+        <div class="buttons-2">
+            <button type="button" class="button blue" data-ng-click="hideEditProfileModal()">Cancel</button>
+            <button type="button" class="button blue has-border" data-ng-click="saveEditedProfile()">OK</button>
+        </div>
+    </ion-footer-bar>
+</div> <!-- end modal -->
