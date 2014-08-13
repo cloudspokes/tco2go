@@ -1,0 +1,57 @@
+<!-- Modal: Sign Up -->
+<div class="modal black-overlay-modal sign-up-modal">
+    <ion-content>
+        <div class="padded-container">
+            <h1>Sign Up</h1>
+            <div class="list">
+                <!-- Name field -->
+                <div class="label-wrapper">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Name</span>
+                        <input type="text" placeholder="" data-ng-model="newProfile.username">
+                    </label>
+                    <a href="javascript:;" class="input-delete" data-ng-click="clearName()" data-ng-show="newProfile.name.length">
+                        <span class="icon-sprite icon-input-delete"></span>
+                    </a>
+                </div>
+                <!-- Password field -->
+                <div class="label-wrapper">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Password</span>
+                        <input type="password" placeholder="" data-ng-model="newProfile.password">
+                    </label>
+                    <a href="javascript:;" class="input-delete" data-ng-click="clearPassword()" data-ng-show="newProfile.name.length">
+                        <span class="icon-sprite icon-input-delete"></span>
+                    </a>
+                </div>
+                <!-- Email field -->
+                <div class="label-wrapper">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="text" placeholder="" data-ng-model="newProfile.email">
+                    </label>
+                    <a href="javascript:;" class="input-delete" data-ng-click="clearEmail()"  data-ng-show="newProfile.email.length">
+                        <span class="icon-sprite icon-input-delete"></span>
+                    </a>
+                </div>
+                <!-- Handle field -->
+                <div class="label-wrapper">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Handle</span>
+                        <input type="text" placeholder="" data-ng-model="newProfile.handle">
+                    </label>
+                    <a href="javascript:;" class="input-delete" data-ng-click="clearHandle()" data-ng-show="newProfile.handle.length">
+                        <span class="icon-sprite icon-input-delete"></span>
+                    </a>
+                </div>
+            </div> <!-- end .list -->
+        </div> <!-- end div.padded-container -->
+    </ion-content>
+    <!-- Footer -->
+    <ion-footer-bar class="button-footer bar bar-footer">
+        <div class="buttons-2">
+            <button type="button" class="button blue" data-ng-click="hideNewProfileModal()">Cancel</button>
+            <button type="button" class="button blue has-border" data-ng-click="saveNewProfile()">OK</button>
+        </div>
+    </ion-footer-bar>
+</div> <!-- end modal -->

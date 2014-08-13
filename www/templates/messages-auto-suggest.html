@@ -68,7 +68,7 @@
     <ion-footer-bar>
         <div class="messages-footer button-footer">
             <div class="input-wrapper">
-                <input type="text" placeholder="write a message..." data-ng-model="messageTyped" data-ng-disabled="!selectedUser.handle">
+                <input type="text" placeholder="write a message" data-ng-model="messageTyped" data-ng-disabled="!selectedUser.handle">
             </div>
             <button class="button blue" type="button" data-ng-click="sendMessage()" data-ng-class="{ inactive: !selectedUser.handle || !messageTyped.length }" data-animation="no-animation">Send</button>
         </div>

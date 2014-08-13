@@ -4,8 +4,8 @@
         <h1>Reminder</h1>
         <span class="alerts-with-count">
             <span class="icon-sprite icon-alerts"></span>
-            <span class="alert-count" data-ng-show="alerts.length > 0">
-                <span>{{ alerts.length }}</span>
+            <span class="alert-count" data-ng-show="alertsLength > 0">
+                <span>{{ alertsLength }}</span>
             </span>
         </span>
     </ion-header-bar>
@@ -13,9 +13,9 @@
         <div class="padded-container">
             <ul class="list alert-list">
                 <li class="item" data-ng-repeat="alert in alerts">
-                    <h2>{{ alert.title }}</h2>
+                    <h2>{{ alert.name }}</h2>
                     <div class="address">
-                        <p>{{ alert.address }}</p>
+                        <p>{{ alert.location }}</p>
                         <a href="javascript:;">Find Location</a>
                     </div>
                     <div class="countdown">

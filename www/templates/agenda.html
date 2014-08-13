@@ -44,8 +44,8 @@
                     <a href="javascript:;" data-ng-click="showAlert()">
                         <span class="alerts-with-count">
                             <span class="icon-sprite icon-alerts"></span>
-                            <span class="alert-count" data-ng-show="alerts.length > 0">
-                                <span>{{ alerts.length }}</span>
+                            <span class="alert-count" data-ng-show="alertsLength > 0">
+                                <span>{{ alertsLength }}</span>
                             </span>
                         </span>
                     </a>
@@ -56,13 +56,13 @@
         <ion-scroll class="has-2-headers-scroll" data-delegate-handle='agenda-list'>
             <ul class="list agenda-list">
                 <!-- Event item -->
-                <li class="item {{ item.type }}" data-ng-repeat="item in filteredEvents = (agenda | filter:filterByType)" data-ng-click="showEventDetails(item)">
+                <li class="item {{ item.type }}" data-ng-repeat="item in filteredEvents = (agenda | filter:filterByType)" data-ng-click="showEventDetailsModal(item)">
                     <div class="time">
-                        <span>{{ item.beginTime|date:'h:mm a' }}</span>
+                        <span>{{ item.start_time|date:'h:mm a' }}</span>
                         <span>-</span>
-                        <span>{{ item.endTime|date:'h:mm a' }}</span>
+                        <span>{{ item.end_time|date:'h:mm a' }}</span>
                     </div>
-                    <div class="title">{{ item.title }}</div>
+                    <div class="title">{{ item.name }}</div>
                 </li>
             </ul>
             <!-- No event message -->

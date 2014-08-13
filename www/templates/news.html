@@ -15,10 +15,10 @@
         <ion-scroll class="has-header-scroll" delegate-handle="news-list-scroll">
             <ul class="news-list">
                 <li class="item" data-ng-repeat="news in newsList">
-                    <h2 data-ng-click="showNewsDetailsModal(news)">{{ news.title }}</h2>
-                    <p class="digest" data-ng-bind-html="news.digest"></p>
+                    <h2 data-ng-click="showNewsDetailsModal(news)">{{ news.name }}</h2>
+                    <p class="digest" data-ng-bind-html="news.content"></p>
                     <div class="info">
-                        Posted on {{ news.postDate }} by <a href="javascript:;"><span class="handle">{{ news.postMember }}</span></a>
+                        Posted on {{ news.creation_date | date:'MM.dd.yyyy hh:mm'  }} by <a href="javascript:;"><span class="handle">{{ news.post_member }}</span></a>
                     </div>
                 </li>
             </ul>

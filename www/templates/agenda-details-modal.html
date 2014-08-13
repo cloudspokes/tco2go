@@ -15,15 +15,15 @@
                 <header class="padded-container">
                     <!-- Time & Date -->
                     <div class="time float-left">
-                        <span>{{ event.beginTime|date:'h:mm a' }}</span> <span>-</span> <span>{{ event.endTime|date:'h:mm a' }}</span>
+                        <span>{{ event.start_time|date:'h:mm a' }}</span> <span>-</span> <span>{{ event.end_time|date:'h:mm a' }}</span>
                     </div>
-                    <div class="date float-right">{{ event.beginTime | date:'d/M/yyyy' }}</div>
+                    <div class="date float-right">{{ event.start_time | date:'d/M/yyyy' }}</div>
                     <!-- Title -->
-                    <h2>{{ event.title }}</h2>
+                    <h2>{{ event.name }}</h2>
                 </header>
 
                 <!-- Address Line -->
-                <p class="address padded-container" data-ng-bind-html="event.address">
+                <p class="address padded-container" data-ng-bind-html="event.location">
                 </p>
 
                 <!-- Countdown & Alert toggle-->
@@ -54,7 +54,7 @@
                     <span class="icon-sprite" data-ng-class="{'icon-plus': !eventExpanded, 'icon-minus': eventExpanded}" data-ng-click="toggleEventExpanded()"></span>
                     <h3 data-ng-click="toggleEventExpanded()">Event Description</h3>
                     <div class="content padded-container" data-ng-show="eventExpanded">
-                        <p>{{ event.eventDescription }}</p>
+                        <p>{{ event.details }}</p>
                     </div>
                 </section>
 
@@ -64,9 +64,9 @@
                     <h3 data-ng-click="toggleCompetitorsExpanded()">The Competitors</h3>
                     <div class="content" data-ng-show="competitorsExpanded">
                         <ul class="list user-list">
-                            <li class="item" data-ng-repeat="user in event.theCompetitors" data-ng-click="showAttendeeProfileModal()">
+                            <li class="item" data-ng-repeat="user in event.theCompetitors" data-ng-click="showAttendeeProfileModal(user)">
                                 <div class="user-picture">
-                                    <img src="img/dummy-user-pic.png" data-ng-src="{{ user.picture}}" alt="">
+                                    <img src="img/dummy-user-pic.png" data-ng-src="{{ user.avatar }}" alt="">
                                 </div>
                                 <div class="user-info">
                                     <div class="name">{{ user.handle }}</div>

@@ -23,29 +23,29 @@
         <ion-scroll class="has-header-scroll" direction="y" delegate-handle="favorites-list-scroll">
             <!-- Attendee list -->
             <ul class="list user-list favorite-list" data-ng-if="currentGroup === 'Attendee'">
-                <li class="item" data-ng-repeat="user in attendees" data-ng-click="showAttendeeProfileModal()">
+                <li class="item" data-ng-repeat="user in attendees" data-ng-click="showAttendeeProfileModal(user)">
                     <div class="favorite-info">
                         <span class="icon-sprite icon-favorite"></span>
-                        <span class="favorite-count">{{ user.favorites }}</span>
+                        <span class="favorite-count">{{ user.likes }}</span>
                     </div>
                     <div class="user-picture">
-                        <img src="img/dummy-user-pic.png" data-ng-src="{{ user.picture}}" alt="">
+                        <img src="img/dummy-user-pic.png" data-ng-src="{{ user.attendee.avatar }}" alt="">
                     </div>
                     <div class="user-info">
-                        <div class="name">{{ user.handle }}</div>
-                        <div class="country-and-track">{{ user.country }}, {{ user.track }}</div>
+                        <div class="name">{{ user.attendee.handle }}</div>
+                        <div class="country-and-track">{{ user.attendee.country }}, {{ user.attendee.track }}</div>
                     </div>
                 </li>
             </ul>
             <!-- Event list -->
             <ul class="list user-list favorite-list" data-ng-if="currentGroup === 'Event'">
-                <li class="item" data-ng-repeat="event in events">
+                <li class="item" data-ng-repeat="event in events" data-ng-click="showEventDetailsModal(event.event)">
                     <div class="favorite-info">
                         <span class="icon-sprite icon-favorite"></span>
-                        <span class="favorite-count">{{ event.favorites }}</span>
+                        <span class="favorite-count">{{ event.likes }}</span>
                     </div>
                     <div>
-                        {{ event.title }}
+                        {{ event.event.name }}
                     </div>
                 </li>
             </ul>

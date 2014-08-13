@@ -16,9 +16,9 @@
                 <!-- Area containing user picture -->
                 <header>
                     <p class="handle">{{ attendeeProfile.handle }}</p>
-                    <p class="role">{{ attendeeProfile.role }}</p>
+                    <p class="role">{{ attendeeProfile.name }}</p>
                     <figure class="picture">
-                        <img data-ng-src="{{ attendeeProfile.imageUrl }}" width="112" height="112" alt="">
+                        <img data-ng-src="{{ attendeeProfile.avatar }}" width="112" height="112" alt="">
                     </figure>
                     <p class="quote">&ldquo;{{ attendeeProfile.quote }}&rdquo;</p>
                 </header>
@@ -36,11 +36,11 @@
                         <tbody>
                             <tr>
                                 <th>Country</th>
-                                <td>{{ attendeeProfile.country }}</td>
+                                <td>{{ attendeeProfile.county }}</td>
                             </tr>
                             <tr>
                                 <th>Member Since</th>
-                                <td>{{ attendeeProfile.memberSince }}</td>
+                                <td>{{ attendeeProfile.member_since }}</td>
                             </tr>
                             <tr>
                                 <th>Email</th>
@@ -48,8 +48,8 @@
                             </tr>
                             <tr>
                                 <th>Currently Registered</th>
-                                <td><a href="javascript:;" data-ng-click="showAttendeeCurrentlyRegisteredModal()">
-                                        <span data-ng-pluralize count="attendeeProfile.currentlyRegistered.length" when="
+                                <td><a href="javascript:;" data-ng-click="showAttendeeCurrentlyRegisteredModal(attendeeProfile.id)">
+                                        <span data-ng-pluralize count="attendeeProfile.current_challenges" when="
                                             {'0': '0 Challenge',
                                              'one': '1 Challenge',
                                              'other': '{} Challenges'}
@@ -63,10 +63,10 @@
                 <!-- Share buttons -->
                 <div class="share-panel padded-container clear-after">
                     <div class="left">
-                        <a href="javascript:;">
+                        <a href="javascript:;" data-ng-click="likeAttendee(attendeeProfile.id)">
                             <span class="icon-profile-like"></span>
                         </a>
-                        <a href="javascript:;" data-ng-click="chatWithAttendee()">
+                        <a href="javascript:;" data-ng-click="chatWithAttendee(attendeeProfile)">
                             <span class="icon-profile-email"></span>
                         </a>
                     </div>

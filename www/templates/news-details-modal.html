@@ -13,7 +13,7 @@
         <ion-scroll class="has-header-scroll">
             <!-- News Photo -->
             <div class="photo">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-ng-src="{{ newsDetails.imageUrl }}" alt="">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-ng-src="{{ newsDetails.image_url }}" alt="">
             </div>
             <!-- Share bar -->
             <div class="share clear-after">
@@ -32,9 +32,8 @@
             <!-- News Details -->
             <div class="details padded-container">
                 <h2>{{ newsDetails.title }}</h2>
-                <p class="digest" data-ng-bind-html="newsDetails.digest"></p>
-                <div class="text" data-ng-bind-html="newsDetails.text"></div>
-                <div class="info">Posted on {{ newsDetails.postDate }} by <a href="javascript:;"><span class="handle">{{ newsDetails.postMember }}</span></a></div>
+                <div class="text" data-ng-bind-html="newsDetails.content"></div>
+                <div class="info">Posted on {{ newsDetails.creation_date | date:'d/M/yyyy' }} by <a href="javascript:;"><span class="handle">{{ newsDetails.created_by }}</span></a></div>
             </div>
         </ion-scroll>
     </ion-content>

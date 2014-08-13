@@ -12,7 +12,7 @@
             <div class="item item-toggle">
                  Event Push Notifications
                  <label class="toggle toggle-assertive">
-                     <input type="checkbox" checked>
+                     <input type="checkbox" checked data-ng-model="settings.event_push_notifications" data-ng-click="updateSettings()">
                      <div class="track">
                          <div class="handle"></div>
                      </div>
@@ -23,7 +23,7 @@
             <div class="item item-toggle">
                 Allow Private Messages
                 <label class="toggle toggle-assertive">
-                     <input type="checkbox" checked>
+                     <input type="checkbox" checked data-ng-model="settings.allow_private_messages" data-ng-click="updateSettings()">
                      <div class="track">
                          <div class="handle"></div>
                      </div>
