@@ -5,14 +5,14 @@
     </ion-header-bar>
     <ion-content>
         <div class="padded-container apply-details">
-            <p>By applying, you will be releasing your topcoder contact and statistical information to [Sponsor Name] and you will be giving [Sponsor Name] permission to contact you about their current job opportunities.</p> 
+            <p>By applying, you will be releasing your topcoder contact and statistical information to {{ applySponsor.name }} and you will be giving {{ applySponsor.name }} permission to contact you about their current job opportunities.</p> 
         </div>
     </ion-content>
     <!-- Footer -->
     <ion-footer-bar class="button-footer bar bar-footer">
         <div class="buttons-2">
             <button type="button" class="button blue" data-ng-click="hideApplyModal()">Cancel</button>
-            <button type="button" class="button blue has-border" data-ng-click="hideApplyModal()">OK</button>
+            <button type="button" class="button blue has-border" data-ng-click="processApplyModal()">OK</button>
         </div>
     </ion-footer-bar>
 </div> <!-- end modal -->

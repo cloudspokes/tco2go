@@ -17,21 +17,15 @@
                 <!-- Country field -->
                 <label class="item item-input item-stacked-label">
                     <span class="input-label">Country</span>
-                    <select data-ng-model="editedProfile.country">
-                        <option value="China">China</option>
-                        <option value="Country 1">Country 1</option>
-                        <option value="Country 2">Country 2</option>
-                        <option value="Country 3">Country 3</option>
-                        <option value="Country 4">Country 4</option>
-                    </select>
-                    <span class="current-selected-item">{{ editedProfile.country }}</span>
-                    <span class="icon-sprite icon-input-dropdown"></span>
+                    <input type="text" placeholder="" data-ng-model="editedProfile.county">
+                    <a href="javascript:;" class="input-delete" data-ng-click="clearCounty()"  data-ng-show="editedProfile.county.length">
+                        <span class="icon-sprite icon-input-delete"></span>
+                    </a>
                 </label>
                 <!-- Email field -->
                 <div class="label-wrapper">
                     <label class="item item-input item-stacked-label">
                         <span class="input-label">Email</span>
-                        <!-- AngularJS has some bugs supporting type="email" (ng-model not updating), use text instead -->
                         <input type="text" placeholder="" data-ng-model="editedProfile.email">
                     </label>
                     <a href="javascript:;" class="input-delete" data-ng-click="clearEmail()"  data-ng-show="editedProfile.email.length">
@@ -43,8 +37,9 @@
                     <span class="input-label">Attendee</span>
                     <select data-ng-model="editedProfile.role">
                         <option value="Competitor">Competitor</option>
-                        <option value="Attendee 1">Attendee 1</option>
-                        <option value="Attendee 2">Attendee 2</option>
+                        <option value="Speaker">Speaker</option>
+                        <option value="Sponsor">Sponsor</option>
+                        <option value="Other">Other</option>
                     </select>
                     <span class="current-selected-item">{{ editedProfile.role }}</span>
                     <span class="icon-sprite icon-input-dropdown"></span>

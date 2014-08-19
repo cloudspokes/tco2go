@@ -24,7 +24,7 @@
         <!-- don't use ion-scroll here because it has some display gliches on the iPhone -->
         <div class="tabs-scroll">
             <ul class="group-tabs">
-                <li data-ng-repeat="group in ['Competitors', 'Speakers', 'Sponsors', 'Others']" data-ng-class="{ active: group === currentGroup }"
+                <li data-ng-repeat="group in ['Competitor', 'Speakers', 'Sponsors', 'Others']" data-ng-class="{ active: group === currentGroup }"
                     data-ng-click='setCurrentGroup(group)'
                 >
                     <span class="text">
@@ -38,9 +38,9 @@
         <!-- User list -->
         <ion-scroll class="attendee-scroll-container" direction="y" delegate-handle="attendee-list-scroll">
             <ul class="list user-list">
-                <li class="item" data-ng-repeat="user in filteredAttendees = (attendees | filter:filterByGroup)" data-ng-click="showAttendeeProfileModal()">
+                <li class="item" data-ng-repeat="user in filteredAttendees = (attendees | filter:filterByGroup)" data-ng-click="showAttendeeProfileModal(user.id)">
                     <div class="user-picture">
-                        <img data-ng-src="{{ user.picture}}" alt="">
+                        <img data-ng-src="{{ user.avatar}}" alt="">
                     </div>
                     <div class="user-info">
                         <div class="name">{{ user.handle }}</div>

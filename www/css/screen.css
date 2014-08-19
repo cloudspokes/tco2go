@@ -1355,13 +1355,13 @@ Title Bar
   top: 10px;
   right: 21px;
 }
-.title-bar.gold {
+.title-bar.gold, .title-bar.Gold {
   background: #efa81e;
 }
-.title-bar.silver {
+.title-bar.silver, .title-bar.Silver {
   background: #b8b8b8;
 }
-.title-bar.bronze {
+.title-bar.bronze, .title-bar.Bronze {
   background: #bc7946;
 }
 
@@ -1542,7 +1542,7 @@ Agenda Page
   color: white;
   padding: 11px 21px;
 }
-.agenda-list .item.contest {
+.agenda-list .item.Competition {
   background: #20abe2;
 }
 .agenda-list .item.food {

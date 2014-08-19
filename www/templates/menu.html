@@ -38,7 +38,7 @@
                 <ion-item nav-clear menu-close href="#/app/settings" ng-class="{ current: $state.current.name.substr(0, 12) == 'app.settings' }">
                     Settings
                 </ion-item>
-                <ion-item nav-clear menu-close href="#/app/welcome">
+                <ion-item nav-clear menu-close href="#/app/welcome" data-ng-click="signOut()">
                     Logout
                 </ion-item>
             </ion-list>
