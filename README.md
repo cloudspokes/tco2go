@@ -5,6 +5,10 @@ Hybrid mobile app for TopCoder Open using Ionic.
 
 The app was originally built using the `sidemenu` starter project.
 
+## Installing Ionic
+
+Ionic uses PhoneGap under the hood. Ionic has a good ["Getting Started" doc](http://ionicframework.com/getting-started/) to get everthing installed and running.
+
 ## iOS Build Errors
 
 I encountered the following error when running `ionic build ios` 
